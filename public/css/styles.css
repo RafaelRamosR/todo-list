@@ -1,0 +1,43 @@
+:root {
+    --blck: #191f29;
+    --gry: #909397;
+    --wht: white;
+    --wht2: #aaaaaa;
+    --green: #00db25;
+    --yellow: #b3db00;
+    --red: #db5800;
+}
+
+.green {
+  background-color: var(--green);
+}
+
+.yellow {
+  background-color: var(--yellow);
+}
+
+.red {
+  background-color: var(--red);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    height: 100vh;
+}
+
+.container h1 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+  border-bottom: 1px dotted var(--gry);        
+}
+
+.row {
+    background: var(--blck);
+    padding: 1rem;
+    color: var(--wht2);
+    font-size: 14px;
+    display: grid;
+    grid-auto-rows: 55px 1fr 30px;
+}
