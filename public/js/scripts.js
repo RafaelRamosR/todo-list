@@ -6,11 +6,24 @@ form.addEventListener('submit', e => {
   e.preventDefault();
   const task = e.target.typeTask.value
   const color = e.target.radioColor.value
-  const newColor = e.target.inputColor.value
   const date = e.target.inputDate.value
-  form.reset()
+  const time = e.target.inputTime.value
 
-  const miObjeto = { 'id': date, 'task': task, 'date': date, 'color': color, 'newColor': newColor };
+  if(!validateEmpty(task)){
+    return validationMessage('Debe especificar el nombre de la tarea.')
+  }
+
+  if(!validateEmpty(color)){
+    return validationMessage('Seleccione un color antes de enviar')
+  }
+
+  if(!validateDate(date, time)){
+    return validationMessage('La fecha es invalida, ingrese una fecha superior a la fecha y hora actual.')
+  }
+
+  form.reset()
+  const miObjeto = { 'id': date, 'task': task, 'color': color, 'date': date, 'time': time };
+  deleteStorage()
   setStorage(date, JSON.stringify(miObjeto))
   getStorage(date)
 });
