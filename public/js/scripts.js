@@ -42,12 +42,13 @@ divTask.addEventListener('click', (e) => {
 const insertData = (data) => {
   const contentTask = document.createElement("div")
   contentTask.classList.add("task")
+  contentTask.classList.add(`${data.color}`)
   contentTask.innerHTML = `
-    <div class="task-title" style="background-color:${data.color}">
+    <div class="task-title">
       <h1>${data.task}</h1>
     </div>
-    <div class="task-date" style="background-color:${data.newColor}">
-      <span class="task-date-item" id="day">${data.date}</span>
+    <div class="task-date">
+      <span class="task-date-item" id="day">${data.date}${data.time}</span>
     </div>
     <input type="button" class="btn-delete" data-key="${data.id}" value="X">
   `
