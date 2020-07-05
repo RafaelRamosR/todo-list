@@ -140,8 +140,8 @@ const getStorage = (key) => {
 */
 const getAllStorage = () => {
   divTask.textContent = ''
-  for (i = 0; i <= localStorage.length - 1; i++) {
-    key = localStorage.key(i)
+  for (let i = 0; i <= localStorage.length - 1; i++) {
+    let key = localStorage.key(i)
     getStorage(key)
   }
 }

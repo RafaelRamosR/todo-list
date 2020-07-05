@@ -1,0 +1,39 @@
+{
+  "name": "todo-list",
+  "version": "1.0.0",
+  "description": "Application that lists the pending tasks and the estimated time to complete the task.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RafaelRamosR/todo-list.git"
+  },
+  "keywords": [
+    "todo-lits",
+    "countdown",
+    "localStorage"
+  ],
+  "author": "Rafael R. Ramos R.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RafaelRamosR/todo-list/issues"
+  },
+  "homepage": "https://github.com/RafaelRamosR/todo-list#readme",
+  "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/register": "^7.10.4",
+    "autoprefixer": "^9.8.4",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-terser": "^1.2.0"
+  },
+  "dependencies": {
+    "gulp-htmlmin": "^5.0.1"
+  }
+}
