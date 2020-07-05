@@ -256,4 +256,28 @@ body {
     width: 100%;
     margin: .3em;
   }
+  .btn-delete {
+    width: 5%;
+    margin: auto;
+    text-align: center;
+  }
+  .task {
+    display: flex;
+    flex-direction: column;
+  }
+  .task-title {
+    width: 100%;
+  }
+  .task-date {
+    width: 100%;
+    margin: 0px 0px !important;
+  }
+  .task-date ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    padding: 0px;
+    justify-content: center;
+  }
 }
