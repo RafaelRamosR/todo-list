@@ -5,7 +5,6 @@ const validateEmpty = (input, type) => {
   if(input.trim() === ""){
     return false
   }
-
   return true
 }
 
@@ -17,9 +16,7 @@ const validateDate = (date, time) => {
     return false
   }
 
-  /*
-    Get current date
-  */
+  // Get current date
   const n =  new Date(),
   year = n.getFullYear(),
   /*
@@ -30,9 +27,7 @@ const validateDate = (date, time) => {
   month = mouth > 10 ? mouth : '0'+mouth,
   day = n.getDate() > 10 ? n.getDate() : '0'+n.getDate()
   
-  /*
-    We obtain the year, month and day entered by the user
-  */
+  // We obtain the year, month and day entered by the user
   const dateYear = date.split('-')[0],
   dateMonth = date.split('-')[1],
   dateDay = date.split('-')[2]
@@ -53,21 +48,15 @@ const validateDate = (date, time) => {
     return false
   }
 
-  /*
-    Get current time
-  */
+  // Get current time
   const hour = n.getHours(),
   minute = n.getMinutes();
 
-  /*
-    Get the time selected by the user
-  */
+  // Get the time selected by the user
   const dateHour = time.split(':')[0],
   dateMinute = time.split(':')[1];
 
-  /*
-    The time only needs to be validated if the task is for today
-  */
+  //  The time only needs to be validated if the task is for today
   if(dateYear == year && dateMonth == month && dateDay == day){
     /*
       If you select a time lower than the current time, bye
@@ -77,7 +66,6 @@ const validateDate = (date, time) => {
       return false
     }
   }
-  
   return true
 }
 
@@ -85,8 +73,8 @@ const validateDate = (date, time) => {
   Show validation message on screen
 */
 const validationMessage = (message) => {
-  // Possible previous messages are deleted
-  deleteStorage()
+  cleanMessage()
+  // Create message
   const contentMessage = document.createElement("div")
   contentMessage.classList.add("error")
   contentMessage.innerHTML = `
@@ -95,4 +83,11 @@ const validationMessage = (message) => {
   //The message is inserted before the first child
   fragment.prepend(contentMessage)
   divTask.prepend(fragment)
+}
+
+const cleanMessage = () => {
+  // Possible previous messages are deleted
+  if(document.querySelector(".error")){
+    document.querySelector(".error").remove()
+  }
 }

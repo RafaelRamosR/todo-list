@@ -1,8 +1,9 @@
 :root {
+  /* colors */
   --green: #2FBF71;
-  --yellow: #ffb30f;
+  --yellow: #FFB30F;
   --red: #FD151B;
-  --white: #ffffff;
+  --white: #FFFFFF;
 }
 
 body {
@@ -38,6 +39,7 @@ body {
 }
 
 /* Form styles */
+
 .form-main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -58,7 +60,6 @@ body {
   padding: 1em 0 0.8em;
   text-align: center;
   font-size: 18px;
-  font-family: inherit;
   font-weight: 300;
   line-height: 1.5;
   color: inherit;
@@ -101,9 +102,11 @@ body {
 .form-group-radio label[for="radioColor1"] {
   color: var(--green);
 }
+
 .form-group-radio label[for="radioColor2"] {
   color: var(--yellow);
 }
+
 .form-group-radio label[for="radioColor3"] {
   color: var(--red);
 }
@@ -112,12 +115,15 @@ body {
   color: var(--white);
   transition: all 0.5s ease-out;
 }
+
 .form-group-radio :checked~label[for="radioColor1"] {
   background-color: var(--green);
 }
+
 .form-group-radio :checked~label[for="radioColor2"] {
   background-color: var(--yellow);
 }
+
 .form-group-radio :checked~label[for="radioColor3"] {
   background-color: var(--red);
 }
@@ -130,25 +136,23 @@ body {
 
 .form-group-date {
   height: 32px;
-  color: #95a5a6;
+  color: #95A5A6;
   margin-bottom: .4em;
-  font-family: "Helvetica", arial, sans-serif;
-
 }
 
 .form-group-date input {
   width: 97%;
   appearance: none;
   font-size: 18px;
-  border: 1px solid #ecf0f1;
-  background-color: #ecf0f1;
+  border: 1px solid #ECF0F1;
+  background-color: #ECF0F1;
   padding: 5px;
   margin-bottom: .5em;
   display: inline-block;
   visibility: visible;
-  color: #95a5a6;
+  color: #95A5A6;
   box-shadow: none;
-  text-align:center;
+  text-align: center;
 }
 
 .btn {
@@ -156,10 +160,16 @@ body {
   font-weight: 500;
   min-width: 40%;
   padding: 5px 10px;
-  border-width: 2px;
+  border-width: .5px;
   border-style: solid;
   border-radius: 20px;
   outline: none;
+  cursor: pointer;
+}
+
+.btn-all {
+  background-color: hsla(0, 100%, 51%, 0.64);
+  color: #FFFFFF;
 }
 
 .btn-delete {
@@ -174,6 +184,7 @@ body {
 }
 
 /* Task card */
+
 .viewTask {
   display: flex;
   flex-direction: column;
@@ -224,7 +235,13 @@ body {
   color: var(--red);
 }
 
+.finish {
+  font-weight: 600;
+  color: var(--white)
+}
+
 /* Responsive */
+
 @media (max-width: 800px) {
   .form-main {
     display: grid;
