@@ -28,7 +28,7 @@ body {
   grid-template-columns: 1fr;
 }
 
-.container h1 {
+.container--title {
   text-align: center;
   font-size: 2.5rem;
 }
@@ -75,7 +75,7 @@ body {
   overflow: hidden;
 }
 
-.form-group-radio input {
+.form-radio-input {
   width: 32px;
   height: 32px;
   z-index: 2;
@@ -86,7 +86,7 @@ body {
   visibility: hidden;
 }
 
-.form-group-radio label {
+.form-radio-label {
   padding: 12px 30px;
   width: 100%;
   display: block;
@@ -99,32 +99,32 @@ body {
   font-weight: 700;
 }
 
-.form-group-radio label[for="radioColor1"] {
+.label1 {
   color: var(--green);
 }
 
-.form-group-radio label[for="radioColor2"] {
+.label2 {
   color: var(--yellow);
 }
 
-.form-group-radio label[for="radioColor3"] {
+.label3 {
   color: var(--red);
 }
 
-.form-group-radio input:checked~label {
+.form-radio-input:checked~label {
   color: var(--white);
   transition: all 0.5s ease-out;
 }
 
-.form-group-radio :checked~label[for="radioColor1"] {
+.form-radio-input:checked~.label1 {
   background-color: var(--green);
 }
 
-.form-group-radio :checked~label[for="radioColor2"] {
+.form-radio-input:checked~.label2 {
   background-color: var(--yellow);
 }
 
-.form-group-radio :checked~label[for="radioColor3"] {
+.form-radio-input:checked~.label3 {
   background-color: var(--red);
 }
 
@@ -140,7 +140,7 @@ body {
   margin-bottom: .4em;
 }
 
-.form-group-date input {
+.form-date-input {
   width: 97%;
   appearance: none;
   font-size: 18px;
@@ -202,14 +202,14 @@ body {
 }
 
 .task-title {
+  font-weight: normal;
+  font-size: 1.3em;
+}
+
+.task-content-title {
   width: 50%;
   margin: auto;
   text-align: center;
-}
-
-.task-title h1 {
-  font-weight: normal;
-  font-size: 1.3em;
 }
 
 .task-date {
@@ -218,15 +218,16 @@ body {
   text-align: center;
 }
 
-.task-date li {
+.task-date-items {
   display: inline-block;
   font-size: .6em;
   list-style-type: none;
   padding: 1em;
   text-transform: uppercase;
+  color: var(--white);
 }
 
-.task-date span {
+.up-clock {
   display: block;
   font-size: 1.5rem;
 }
@@ -272,7 +273,7 @@ body {
     width: 100%;
     margin: 0px 0px !important;
   }
-  .task-date ul {
+  .task-date-content {
     width: 100%;
     display: flex;
     flex-direction: row;

@@ -11,10 +11,8 @@
         "sourceType": "module"
     },
     "rules": {
-      "one-var": "off",
       "linebreak-style": "off",
       "no-undef": "off",
-      "no-unused-vars": "off",
-      "no-use-before-define": "warn"
+      "no-unused-vars": "off"
     }
 }

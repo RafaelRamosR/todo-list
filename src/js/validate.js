@@ -17,15 +17,15 @@ const validateDate = (date, time) => {
     The month is represented from 0 to 11, 0 = January and 11 = December
     1 is added to the obtained month and a 0 is prepended if it is less than 10
   */
-  const n = new Date(),
-    year = n.getFullYear(),
-    month = n.getMonth() + 1,
-    day = n.getDate();
+  const n = new Date();
+  const year = n.getFullYear();
+  const month = n.getMonth() + 1;
+  const day = n.getDate();
 
   // We obtain the year, month and day entered by the user
-  const dateYear = parseInt(date.split('-')[0], 10),
-    dateMonth = parseInt(date.split('-')[1], 10),
-    dateDay = parseInt(date.split('-')[2], 10);
+  const dateYear = parseInt(date.split('-')[0], 10);
+  const dateMonth = parseInt(date.split('-')[1], 10);
+  const dateDay = parseInt(date.split('-')[2], 10);
 
   /*
     If the selected year is less than the current year, bye
@@ -50,11 +50,11 @@ const validateDate = (date, time) => {
   }
 
   // Get current time
-  const hour = n.getHours(),
-    minute = n.getMinutes(),
-    // Get the time selected by the user
-    dateHour = parseInt(time.split(':')[0], 10),
-    dateMinute = parseInt(time.split(':')[1], 10);
+  const hour = n.getHours();
+  const minute = n.getMinutes();
+  // Get the time selected by the user
+  const dateHour = parseInt(time.split(':')[0], 10);
+  const dateMinute = parseInt(time.split(':')[1], 10);
 
   //  The time only needs to be validated if the task is for today
   if (dateYear === year && dateMonth === month && dateDay === day) {
